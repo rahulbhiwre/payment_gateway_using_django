@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Callback</title>
+
+
+<style>
+h1{
+    color:red;
+}
+h4{
+    color:green;
+}
+</style>
+</head>
+
+<body>
+
+<div id="heading">
+    <h1>Receipt for Payment</h1>                          
+    <h4>STATUS   :  {{ STATUS }} </h4>              
+   <b> TXN_ID </b>       :   {{ TXNID }}          <br>
+   <b> ORDER_ID </b>    :  {{ ORDERID }}         <br>
+   <b>  BANKTXN_ID </b>   :  {{ BANKTXNID }}       <br>
+   <b> TXN_AMOUNT </b>  :  {{ TXNAMOUNT }}         <br>
+  <b>   CURRENCY  </b>    :  {{ CURRENCY }}          <br>
+<b> TXN_DATE   </b>    :  {{ TXNDATE }}          <br>
+<b>  GATEWAY_NAME  </b> :  {{ GATEWAYNAME }}      <br>
+   <b> BANK_NAME  </b>    :  {{ BANKNAME }}         <br>
+  <b>  PAYMENT_MODE  </b> :  {{ PAYMENTMODE }}      <br>
+</div>
+
+</body>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script >
+      var doc = new jsPDF();
+      var h1 = document.querySelector('#heading')
+      doc.fromHTML(h1,15,15)
+      doc.save('output.pdf')
+
+    </script>
+
+</html>

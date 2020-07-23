@@ -1,0 +1,15 @@
+<h1>Register...</h1> 
+<br/><br/>
+<div class="form-group">
+<form method="POST"> 
+      {% csrf_token %} 
+username   :	    {{form.username }}  <br><br>
+first_name :        {{form.first_name }} <br><br>
+ last_name :        {{form.last_name }}  <br><br>
+email      :		{{form.email }}      <br><br>
+password1  :		{{form.password1 }}  <br><br>
+password2  :		{{form.password2 }}  <br><br>
+<button class="btn btn-secondary">Register</button>
+</form>
+  {{form.errors}}
+</div>
