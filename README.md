@@ -11,6 +11,10 @@ Here User Can Do online payment using paytm created with django
 
 #Notes on Testing Paytm:
 
+(1) Add Your Paytm Merchant ID and Other Details in bottom of settings.py file
+
+(2)  
+
 Paytm Wallet 
   Mobile no : 7777777777 ( '7' 10 times) 
   Password: Paytm12345 OTP : 489871
