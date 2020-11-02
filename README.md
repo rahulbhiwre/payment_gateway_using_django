@@ -3,11 +3,13 @@ Here User Can Do online payment using paytm created with django
 
 #Setup :
 1) Create a folder and put all the files inside it.
-2) Create a virtual environment - virtualenv env
-3) Activate VirtualENV - ubuntu: source env/bin/activate
-4) Run requirements.txt pip install r requirements.txt
-5) Run the Application - python manage.py runserver
-6) Migrate
+2) Create a virtual environment = - virtualenv env
+3) Activate VirtualENV = source env/bin/activate
+4) Run requirements.txt = pip install r requirements.txt
+5) Run Migrations Command = 
+    i) python manage.py makemigrations
+    ii) python manage.py migrate
+6) Run the Application = python manage.py runserver
 
 #Notes on Testing Paytm:
 
